@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'ZombieHolocaust';
-    src: url(../fonts/ZombieHolocaust.ttf);
+    src: url(../../fonts/ZombieHolocaust.ttf);
 }
 
 
@@ -13,7 +13,7 @@
 
 @font-face {
     font-family: 'Butcherman';
-    src: url(../fonts/Butcherman-Regular.ttf);
+    src: url(../../fonts/Butcherman-Regular.ttf);
 }
 
 
@@ -21,7 +21,7 @@
 
 @font-face {
     font-family: 'youmurdererbb';
-    src: url(../fonts/youmurdererbb_reg.ttf);
+    src: url(../../fonts/youmurdererbb_reg.ttf);
 }
 
 
@@ -29,7 +29,7 @@
 
 @font-face {
     font-family: 'Hellraiser';
-    src: url(../fonts/HellraiserBloody.ttf);
+    src: url(../../fonts/HellraiserBloody.ttf);
 }
 
 
@@ -37,7 +37,7 @@
 
 @font-face {
     font-family: 'Creepster';
-    src: url(../fonts/Creepster-Regular.ttf);
+    src: url(../../fonts/Creepster-Regular.ttf);
 }
 
 
@@ -45,7 +45,7 @@
 
 @font-face {
     font-family: 'NemoNightmares';
-    src: url(../fonts/NemoNightmares.ttf);
+    src: url(../../fonts/NemoNightmares.ttf);
 }
 
 
@@ -53,7 +53,7 @@
 
 @font-face {
     font-family: 'GypsyCurse';
-    src: url(../fonts/GypsyCurse.ttf);
+    src: url(../../fonts/GypsyCurse.ttf);
 }
 
 
@@ -61,7 +61,7 @@
 
 @font-face {
     font-family: 'shloprg';
-    src: url(../fonts/shloprg.otf) format("opentype");
+    src: url(../../fonts/shloprg.otf) format("opentype");
 }
 
 html,
