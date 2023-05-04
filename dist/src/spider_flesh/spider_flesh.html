@@ -14,11 +14,15 @@
 
     <link rel="stylesheet" href="../spider_flesh/spider_flesh.css">
 
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.142.0/build/three.module", "three/": "https://unpkg.com/three@0.142.0/" } }
+    </script>
+
 
 </head>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">Terror Trove</a>
+        <a class="navbar-brand" href="../../index.html">Terror Trove</a>
         <button class="custom-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,25 +39,38 @@
 </nav>
 
 <body>
-    <div class="descriptionBox">
-        <div>
-            <h1>Spiderflesh</h1>
-            <p><span class="tab"></span>In a dark and secluded corner of a laboratory, a mad scientist worked feverishly on his latest experiment. He had always been obsessed with spiders, and had spent years studying their biology and behavior. But now,
-                he had taken things to a whole new level. <br><span class="tab"></span>Using his knowledge of genetic manipulation, the scientist had created a spider-human hybrid, a creature with the body of a spider and the mind of a human. <br>
-                <span
-                    class="tab"></span>At first, the hybrid seemed harmless enough. But as time went on, it became clear that the creature was not as docile as it seemed. <br><span class="tab"></span>It began to display strange, unsettling behaviors, creeping through
-                    the laboratory at night and leaving a trail of destruction in its wake. It would climb onto the ceilings and walls, watching the scientists with an eerie detachment that left them feeling uneasy. <br><span class="tab"></span>And then,
-                    one night, there was a loud commotion coming from the east side of the facility. The security guards flew in droves to the source of the sound; however, they were met with the entire eastside engulfed with flames. Security footage
+    <div class="audioPlacement"><audio controls autoplay loop>
+        <source src="../../sounds/Atmosphere_Frozen_Loop.ogg" type="audio/ogg"></audio>
+    </div>
+    <div class="descriptionBox" id="shrink">
+        <div class="collapsed">
+            <button class="btn" onclick="myFunction()"><h1>Spider Flesh</h1></button>
+            <div class="seperation">
+                <p><span class="tab"></span>In a dark and secluded corner of a laboratory, a mad scientist worked feverishly on his latest experiment. He had always been obsessed with spiders, and had spent years studying their biology and behavior. But
+                    now, he had taken things to a whole new level. <br><span class="tab"></span>Using his knowledge of genetic manipulation, the scientist had created a spider-human hybrid, a creature with the body of a spider and the mind of a human.
+                    <br>
+                    <span class="tab"></span>At first, the hybrid seemed harmless enough. But as time went on, it became clear that the creature was not as docile as it seemed. <br><span class="tab"></span>It began to display strange, unsettling behaviors,
+                    creeping through the laboratory at night and leaving a trail of destruction in its wake. It would climb onto the ceilings and walls, watching the scientists with an eerie detachment that left them feeling uneasy. <br><span class="tab"></span>And
+                    then, one night, there was a loud commotion coming from the east side of the facility. The security guards flew in droves to the source of the sound; however, they were met with the entire eastside engulfed with flames. Security footage
                     later revealed Subject Three, another experiment gone horribly wrong had radiated a blinding light then in a blink of eye bursted into flames. With the attention on eastside, the hybrid disappeared, escaping from the laboratory and
                     vanishing into the night. The scientists searched high and low for their creation, but it was nowhere to be found. <br><span class="tab"></span>Days turned into weeks, and the people of the city began to report strange sightings -
                     a creature with the body of a spider and the face of a human, skulking through the streets at night. Its eyes glowed in the darkness, and its movements were uncannily fluid, like a spider stalking its prey. <br><span class="tab"></span>No
                     one knows what became of the spider-human hybrid, but some say that it still lurks in the shadows, watching and waiting for its next victim. For the people of the city, it is a symbol of the unknown horrors that can be unleashed when
-                    science goes too far.</p>
+                    science goes too far.
+                </p>
+            </div>
         </div>
     </div>
     <div class="c">
         <canvas class="webgl"></canvas>
     </div>
+
+    <script>
+        function myFunction() {
+            var element = document.getElementById("shrink");
+            element.classList.toggle("mystyle");
+        }
+    </script>
     <script type="module" src="./spider_flesh.js"></script>
 </body>
 

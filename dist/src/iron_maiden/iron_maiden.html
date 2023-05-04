@@ -14,11 +14,15 @@
 
     <link rel="stylesheet" href="../iron_maiden/iron_maiden.css">
 
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.142.0/build/three.module", "three/": "https://unpkg.com/three@0.142.0/" } }
+    </script>
+
 
 </head>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">Terror Trove</a>
+        <a class="navbar-brand" href="../../index.html">Terror Trove</a>
         <button class="custom-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,11 +38,15 @@
     </div>
 </nav>
 
+
 <body>
-    <div class="descriptionBox">
-        <div>
-            <h1>Regenerator Iron Maiden</h1>
-            <p>
+    <div class="audioPlacement"><audio controls autoplay loop>
+        <source src="../../sounds/Atmosphere_PersecutionDanger_Loop.ogg" type="audio/ogg"></audio>
+    </div>
+    <div class="descriptionBox" id="shrink">
+        <div class="collapsed">
+            <button class="btn" onclick="myFunction()"><h1>Regenerator Iron Maiden</h1></button>
+            <div class="seperation">
                 <span class="tab"></span> The Regenerators and their armored variant, the Iron Maidens, were bio-weapons created by the Los Iluminados cult. They were the result of research into the Las Plagas parasites, which the cult had discovered
                 and hoped to use to gain power. <br></be><span class="tab"></span>The Regenerators were created by infecting human subjects with a special type of Las Plagas parasite, which caused rapid regeneration of their cells and organs. The Iron
                 Maidens were created using the same process, but with the additional step of encasing the host body in a metallic shell to provide enhanced protection. <br></be><span class="tab"></span>However, the parasites had an unintended side effect
@@ -47,11 +55,19 @@
                 abilities made them almost impervious to conventional weapons, and they were even able to regenerate lost limbs in a matter of seconds. The only way to permanently kill them was to target their weak points - the parasites that controlled
                 their regeneration - with specialized weaponry such as the thermal scope and the Plaga removal device.<br></be><span class="tab"></span> The Regenerators and Iron Maidens were unleashed upon the unsuspecting villagers of Spain as part
                 of the Los Iluminados cult's plan to spread their influence and gain power. Their monstrous appearance and near-invincibility struck fear into the hearts of all who encountered them.</p>
+            </div>
         </div>
     </div>
     <div class="c">
         <canvas class="webgl"></canvas>
     </div>
+
+    <script>
+        function myFunction() {
+            var element = document.getElementById("shrink");
+            element.classList.toggle("mystyle");
+        }
+    </script>
     <script type="module" src="./iron_maiden.js"></script>
 </body>
 

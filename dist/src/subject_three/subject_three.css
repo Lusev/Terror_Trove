@@ -3,6 +3,20 @@
     padding: 0;
 }
 
+@media(min-width:300px) and (max-width:980px) {
+    .descriptionBox {
+        display: flex !important;
+        left: 0 !important;
+        width: 99% !important;
+    }
+    .audioPlacement {
+        right: 75px !important;
+    }
+    .btn {
+        left: 15% !important;
+    }
+}
+
 @font-face {
     font-family: 'ZombieHolocaust';
     src: url(../fonts/ZombieHolocaust.ttf);
@@ -21,7 +35,7 @@
 
 @font-face {
     font-family: 'youmurdererbb';
-    src: url(../fonts/youmurdererbb_reg.ttf);
+    src: url(../../fonts/youmurdererbb_reg.ttf);
 }
 
 
@@ -61,7 +75,7 @@
 
 @font-face {
     font-family: 'shloprg';
-    src: url(../fonts/shloprg.otf) format("opentype");
+    src: url(../../fonts/shloprg.otf) format("opentype");
 }
 
 html,
@@ -125,16 +139,22 @@ ul {
 }
 
 .descriptionBox {
+    display: block;
     position: fixed;
+    max-width: 580px;
     width: 500px;
-    height: 700px;
-    background: rgba(0, 0, 0, 0.50);
+    height: 70px;
+    background: rgba(0, 0, 0, 0.80);
     left: 50px;
     top: 100px;
     border-radius: 20px 20px;
-    text-align: left;
     z-index: 1;
     padding: 0 50px;
+    overflow-y: auto;
+    justify-content: center;
+    text-align: center;
+    overflow-y: none;
+    scrollbar-width: none;
 }
 
 h1 {
@@ -154,4 +174,75 @@ p {
 
 .tab {
     padding-left: 2em;
+}
+
+.mystyle {
+    width: 500px;
+    height: 500px;
+    /* background-color: coral; */
+    color: #ffdede;
+    font-size: 20px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.btn {
+    display: flex;
+    position: absolute;
+    left: 30%;
+    font-size: 2rem;
+    font-family: 'shloprg', sans-serif;
+    color: #970000;
+    background-color: #1d362b00;
+    border-radius: 2px 2px;
+    border-style: none;
+    padding: 5px;
+    width: auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.seperation {
+    padding-top: 80px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #5e0606;
+    border-color: #1d362b;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    border-radius: 25px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+audio {
+    height: 30px;
+    width: 103px;
+    transition: width 0.5s;
+    -webkit-transition: width 0.5s;
+    background-color: #5e0606;
+    border-radius: 25px;
+}
+
+audio:hover {
+    height: 30px;
+    width: 300px;
+}
+
+.audioPlacement {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 100px;
+    z-index: 1;
+    /* height: 5px;
+    width: 5px;
+    overflow: hidden; */
+    height: 30px;
 }

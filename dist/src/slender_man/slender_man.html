@@ -14,11 +14,15 @@
 
     <link rel="stylesheet" href="../slender_man/slender_man.css">
 
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.142.0/build/three.module", "three/": "https://unpkg.com/three@0.142.0/" } }
+    </script>
+
 
 </head>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">Terror Trove</a>
+        <a class="navbar-brand" href="../../index.html">Terror Trove</a>
         <button class="custom-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,10 +39,13 @@
 </nav>
 
 <body>
-    <div class="descriptionBox">
-        <div>
-            <h1>Slender man</h1>
-            <p>
+    <div class="audioPlacement"><audio controls autoplay loop>
+        <source src="../../sounds/Song_PainfulMemories_Loop.ogg" type="audio/ogg"></audio>
+    </div>
+    <div class="descriptionBox" id="shrink">
+        <div class="collapsed">
+            <button class="btn" onclick="myFunction()"><h1>Slender Man</h1></button>
+            <div class="seperation">
                 <span class="tab"></span> In the small town of Ravenswood, a group of friends were gathered in a dimly lit room, huddled around a laptop screen. They had heard of the legend of the Slender Man, a faceless entity with impossibly long arms
                 and a hunger for human flesh. <br><span class="tab"></span>As they watched a video of the Slender Man stalking its prey, the room grew colder and the air grew thick with dread. Suddenly, the power went out, plunging the room into darkness.
                 <br><span class="tab"></span>One of the friends nervously lit a candle, and they soon realized they were not alone. The Slender Man was standing in the corner of the room, towering over them with its elongated limbs and blank face. <br>
@@ -46,11 +53,18 @@
                 last friend standing managed to escape, but the Slender Man was still hot on their heels. They ran through the woods, the Slender Man's footsteps echoing behind them. <br><span class="tab"></span>As they stumbled over a fallen branch,
                 the Slender Man caught up to them, its impossibly long arms wrapping around them and pulling them close. The last thing the friend saw was the Slender Man's faceless void staring back at them, before everything went dark. <br><span class="tab"></span>No
                 one ever saw or heard from the group of friends again. The legend of the Slender Man lives on, and some say that on quiet nights, you can hear its footsteps echoing through the woods, searching for its next victim.</p>
+            </div>
         </div>
     </div>
     <div class="c">
         <canvas class="webgl"></canvas>
     </div>
+    <script>
+        function myFunction() {
+            var element = document.getElementById("shrink");
+            element.classList.toggle("mystyle");
+        }
+    </script>
     <script type="module" src="./slender_man.js"></script>
 </body>
 

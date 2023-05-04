@@ -3,6 +3,40 @@
     padding: 0;
 }
 
+@media(min-width:300px) and (max-width:980px) {
+    .point {
+        position: absolute;
+        top: 50%;
+        left: -50% !important;
+    }
+    .container {
+        display: block !important;
+        position: fixed !important;
+        max-width: 580px;
+        width: 500px;
+        height: 500px;
+        background: rgba(0, 0, 0, 0);
+        left: 0px !important;
+        top: 100px;
+        border-radius: 20px 20px;
+        z-index: 1;
+        overflow-y: auto;
+        justify-content: center;
+        text-align: center;
+        overflow-y: none;
+        scrollbar-width: none;
+    }
+    .card {
+        box-shadow: 0 1px 80px rgba(116, 18, 18) !important;
+    }
+    col {
+        margin: 50px 0px !important;
+    }
+    .audioPlacement {
+        right: 75px !important;
+    }
+}
+
 @font-face {
     font-family: 'ZombieHolocaust';
     src: url(../fonts/ZombieHolocaust.ttf);
@@ -21,7 +55,7 @@
 
 @font-face {
     font-family: 'youmurdererbb';
-    src: url(../fonts/youmurdererbb_reg.ttf);
+    src: url(../../fonts/youmurdererbb_reg.ttf);
 }
 
 
@@ -61,7 +95,7 @@
 
 @font-face {
     font-family: 'shloprg';
-    src: url(../fonts/shloprg.otf) format("opentype");
+    src: url(../../fonts/shloprg.otf) format("opentype");
 }
 
 html,
@@ -69,6 +103,7 @@ body {
     overflow: hidden;
     width: 100%;
     height: 100%;
+    background-color: blue;
 }
 
 
@@ -251,4 +286,41 @@ h1 {
     z-index: 100;
     width: 500px;
     height: 500px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #5e0606;
+    border-color: #1d362b;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    border-radius: 25px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+audio {
+    height: 30px;
+    width: 103px;
+    transition: width 0.5s;
+    -webkit-transition: width 0.5s;
+    background-color: #5e0606;
+    border-radius: 25px;
+}
+
+audio:hover {
+    height: 30px;
+    width: 300px;
+}
+
+.audioPlacement {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 100px;
+    z-index: 1;
+    /* height: 5px;
+    width: 5px;
+    overflow: hidden; */
+    height: 30px;
 }

@@ -14,11 +14,15 @@
 
     <link rel="stylesheet" href="../demon_pig/demon_pig.css">
 
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.142.0/build/three.module", "three/": "https://unpkg.com/three@0.142.0/" } }
+    </script>
+
 
 </head>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">Terror Trove</a>
+        <a class="navbar-brand" href="../../index.html">Terror Trove</a>
         <button class="custom-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,20 +39,32 @@
 </nav>
 
 <body>
-    <div class="descriptionBox">
-        <div>
-            <h1>Demon Pig</h1>
-            <p> <span class="tab"></span>Once upon a time, there was a demon pig named Baelzebacon who longed to live among humans. He was tired of being feared and despised by everyone he encountered in the underworld, and so he made a deal with the devil
-                to assume a human form.
-                <br><span class="tab"></span> Baelzebacon emerged from the depths of hell, now looking like a tall, slender man with pale skin and piercing blue eyes. He dressed himself in a fine suit and made his way into a nearby village, where he quickly
-                made friends with the locals. He found that he had a talent for music and started playing his violin at local pubs and gatherings, earning himself quite the following. <br> <span class="tab"></span>However, Baelzebacon's true nature was
-                never far behind. He would occasionally slip up and reveal his true demonic form, causing panic and chaos wherever he went. Eventually, the villagers caught on to his charade and banished him from the town. Brokenhearted and alone once
-                again, Baelzebacon returned to the underworld, realizing that he could never escape his true nature. From then on, he embraced his demon form and lived as a feared and respected member of the demon community.</p>
+    <div class="audioPlacement"><audio controls autoplay loop>
+        <source src="../../sounds/Atmosphere_DoomTexture.ogg" type="audio/ogg"></audio>
+    </div>
+    <div class="descriptionBox" id="shrink">
+        <div class="collapsed">
+            <button class="btn" onclick="myFunction()"><h1>Demon Pig</h1></button>
+            <div class="seperation">
+                <p> <span class="tab"></span>Once upon a time, there was a demon pig named Baelzebacon who longed to live among humans. He was tired of being feared and despised by everyone he encountered in the underworld, and so he made a deal with the
+                    devil to assume a human form.
+                    <br><span class="tab"></span> Baelzebacon emerged from the depths of hell, now looking like a tall, slender man with pale skin and piercing blue eyes. He dressed himself in a fine suit and made his way into a nearby village, where
+                    he quickly made friends with the locals. He found that he had a talent for music and started playing his violin at local pubs and gatherings, earning himself quite the following. <br> <span class="tab"></span>However, Baelzebacon's
+                    true nature was never far behind. He would occasionally slip up and reveal his true demonic form, causing panic and chaos wherever he went. Eventually, the villagers caught on to his charade and banished him from the town. Brokenhearted
+                    and alone once again, Baelzebacon returned to the underworld, realizing that he could never escape his true nature. From then on, he embraced his demon form and lived as a feared and respected member of the demon community.</p>
+            </div>
         </div>
     </div>
     <div class="c">
         <canvas class="webgl"></canvas>
     </div>
+
+    <script>
+        function myFunction() {
+            var element = document.getElementById("shrink");
+            element.classList.toggle("mystyle");
+        }
+    </script>
     <script type="module" src="./demon_pig.js"></script>
 </body>
 

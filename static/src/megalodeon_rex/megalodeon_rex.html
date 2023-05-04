@@ -14,11 +14,15 @@
 
     <link rel="stylesheet" href="../megalodeon_rex/megalodeon_rex.css">
 
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.142.0/build/three.module", "three/": "https://unpkg.com/three@0.142.0/" } }
+    </script>
+
 
 </head>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">Terror Trove</a>
+        <a class="navbar-brand" href="../../index.html">Terror Trove</a>
         <button class="custom-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,10 +39,13 @@
 </nav>
 
 <body>
-    <div class="descriptionBox">
-        <div>
-            <h1>Megalodon Rex</h1>
-            <p>
+    <div class="audioPlacement"><audio controls autoplay loop>
+        <source src="../../sounds/Atmosphere_BoundedScreams_Loop.ogg" type="audio/ogg"></audio>
+    </div>
+    <div class="descriptionBox" id="shrink">
+        <div class="collapsed">
+            <button class="btn" onclick="myFunction()"><h1>Megalodon Rex</h1></button>
+            <div class="seperation">
                 <p><span class="tab"></span>Deep beneath the ocean's surface, a monstrous creature lay in wait. It was a Megalodon, a prehistoric shark that had somehow survived the passage of time. But this Megalodon was unlike any other - it had been mixed
                     with the DNA of a tyrannosaurus, creating a creature that was both ancient and terrifyingly new. <br>
                     <p><span class="tab"></span>With jaws that could crush steel and a body that dwarfed even the largest whales, the Megalodon-Tyrannosaurus hybrid ruled the depths of the ocean, preying anything that crossed its path. It was a monster of
@@ -49,11 +56,18 @@
                                 next meal. <br>
                                 <p><span class="tab"></span>The world has never seen a creature quite like it, and perhaps it is better that way. For the Megalodon-Tyrannosaurus is a symbol of the unknown horrors that lurk just beneath the surface of the
                                     world, waiting to be unleashed upon an unsuspecting humanity.</p>
+            </div>
         </div>
     </div>
     <div class="c">
         <canvas class="webgl"></canvas>
     </div>
+    <script>
+        function myFunction() {
+            var element = document.getElementById("shrink");
+            element.classList.toggle("mystyle");
+        }
+    </script>
     <script type="module" src="./megalodeon_rex.js"></script>
 </body>
 

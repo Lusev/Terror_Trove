@@ -14,11 +14,15 @@
 
     <link rel="stylesheet" href="../head_crab/head_crab.css">
 
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.142.0/build/three.module", "three/": "https://unpkg.com/three@0.142.0/" } }
+    </script>
+
 
 </head>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">Terror Trove</a>
+        <a class="navbar-brand" href="../../index.html">Terror Trove</a>
         <button class="custom-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,19 +39,30 @@
 </nav>
 
 <body>
-    <div class="descriptionBox">
-        <div>
-            <h1>Headcrab</h1>
-            <p><span class="tab"></span>The Headcrab is a parasitic alien species. These creatures attach themselves to the heads of their victims and take control of their nervous systems, turning them into mindless zombies. <br><span class="tab"></span>Headcrabs
-                are believed to have arrived on Earth via a portal opened by the alien race known as the Combine. They quickly spread and infested human populations, causing widespread panic and destruction. <br><span class="tab"></span>There are several
-                different types of Headcrabs, each with its own unique abilities and traits. The standard Headcrab is a small, brownish-red creature with a spiky carapace and elongated limbs. It launches itself at its prey, attaching itself to their heads
-                and injecting them with a venom that takes control of their nervous system. <br><span class="tab"></span>Other types of Headcrabs include the Poison Headcrab, which can spit a toxic substance at its prey, and the Fast Headcrab (also known
-                as Crabhead), which moves at incredible speeds and is highly aggressive.</p>
+    <div class="audioPlacement"><audio controls autoplay loop>
+        <source src="../../sounds/Atmosphere_BoundedScreams_Loop.ogg" type="audio/ogg"></audio>
+    </div>
+    <div class="descriptionBox" id="shrink">
+        <div class="collapsed">
+            <button class="btn" onclick="myFunction()"><h1>Headcrab</h1></button>
+            <div class="seperation">
+                <p><span class="tab"></span>The Headcrab is a parasitic alien species. These creatures attach themselves to the heads of their victims and take control of their nervous systems, turning them into mindless zombies. <br><span class="tab"></span>Headcrabs
+                    are believed to have arrived on Earth via a portal opened by the alien race known as the Combine. They quickly spread and infested human populations, causing widespread panic and destruction. <br><span class="tab"></span>There are
+                    several different types of Headcrabs, each with its own unique abilities and traits. The standard Headcrab is a small, brownish-red creature with a spiky carapace and elongated limbs. It launches itself at its prey, attaching itself
+                    to their heads and injecting them with a venom that takes control of their nervous system. <br><span class="tab"></span>Other types of Headcrabs include the Poison Headcrab, which can spit a toxic substance at its prey, and the Fast
+                    Headcrab (also known as Crabhead), which moves at incredible speeds and is highly aggressive.</p>
+            </div>
         </div>
     </div>
     <div class="c">
         <canvas class="webgl"></canvas>
     </div>
+    <script>
+        function myFunction() {
+            var element = document.getElementById("shrink");
+            element.classList.toggle("mystyle");
+        }
+    </script>
     <script type="module" src="./head_crab.js"></script>
 </body>
 
